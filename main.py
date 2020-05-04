@@ -22,26 +22,26 @@ print("======================================================================")
 
 imgExts = [".png"]
 images = [file for file in files if os.path.splitext(file)[1].lower() in imgExts]
-print(images)
+#print(images)
 
 docExts = [".docx"]
 docs = [file for file in files if os.path.splitext(file)[1].lower() in docExts]
-print(docs)
+#print(docs)
 
 meExt = [".mp4"]
 medias = [file for file in files if os.path.splitext(file)[1].lower() in meExt]
-print(medias)
+#print(medias)
 
 te = [".txt"]
 text = [file for file in files if os.path.splitext(file)[1].lower() in te]
-print(text)
+#print(text)
 
 others = []
 for file in files:
     ext = os.path.splitext(file)[1].lower()
     if (ext not in te) and (ext not in meExt) and (ext not in docExts) and (ext not in imgExts) and os.path.isfile(file):
         others.append(file)
-print(others)
+#print(others)
 
 move("Images", images)
 move("Text", text)
