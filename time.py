@@ -20,6 +20,7 @@ if __name__ == "__main__":
     init =time()
     for i in range(10000):
         func2(3,5)
+    
     print("Avika Time", time()-init)
     print("Overall Time", time()-init1)
     
